@@ -1,8 +1,15 @@
+import FrontendLayout from "@/components/layouts/FrontendLayout";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      Home Page
-    </div>
+    <FrontendLayout>
+      <section className="relative flex min-h-screen items-center overflow-hidden
+      bg-[url('/images/hero.jpg')] bg-cover bg-center pt-32 lg:pt-36 py-32">
+        {/* overlay */}
+        <div className="absolute inset-0 bg-black/55" />
+        {/* gradient */}
+        <div className="absolute inset-0 bg-linear-to-r from-slate-950/80 via-slate-900/50 to-transparent" />
+      </section>
+    </FrontendLayout>
   );
 }
